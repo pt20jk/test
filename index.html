@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Iksan - Ancient Baekje & Jewel Capital | Global Tourism Portal</title>
+  <meta name="description" content="Official Global Tourism Portal for foreign tourists visiting Iksan City, Jeollabuk-do, South Korea. Explore UNESCO World Heritage Mireuksa Temple Site, K-Drama film sets, emerald forests, and authentic gourmet bibimbap.">
+  <meta name="keywords" content="Iksan Tourism, Visit Iksan, Mireuksa Temple, Wanggung-ri, Baekje World Heritage, Korea Travel Guide, KTX Iksan, Hwangdeung Bibimbap, Agape Garden">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-brand">
+      <div class="nav-logo-icon">👑</div>
+      <div class="brand-text">
+        <h1 data-i18n="brandName">Visit Iksan</h1>
+        <p data-i18n="brandSubtitle">Ancient Baekje & Jewels of Korea</p>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active" data-i18n="navHome">Home</a></li>
+      <li><a href="#attractions" data-i18n="navAttractions">Attractions</a></li>
+      <li><a href="#itineraries" data-i18n="navItinerary">Itineraries</a></li>
+      <li><a href="#audio" data-i18n="navAudio">Audio Guides</a></li>
+      <li><a href="#transport" data-i18n="navTransport">Getting Here</a></li>
+      <li><a href="#toolkit" data-i18n="navToolkit">Tourist Toolkit</a></li>
+      <li><a href="#myTripBoard" data-i18n="navFavorites">My Trip</a></li>
+    </ul>
+
+    <div class="lang-selector">
+      <span>🌐</span>
+      <select id="langSelect" aria-label="Select Language">
+        <option value="en">English (US)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="zh">简体中文 (Chinese)</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-overlay">
+      <span class="badge-hero">
+        <span>✨</span> UNESCO World Heritage & Jewel City of Korea
+      </span>
+      <h1 data-i18n="heroTitle">Discover the Heart of Ancient Baekje</h1>
+      <p data-i18n="heroSubtitle">
+        Explore UNESCO World Heritage Sites, K-Drama Film Sets, Emerald Forests & Korea's Jewel Capital in Iksan City.
+      </p>
+
+      <!-- Global Search Bar -->
+      <div class="hero-search-box">
+        <input type="text" id="heroSearchInput" data-i18n-ph="heroSearchPlaceholder" placeholder="Search attractions, food, UNESCO, filming spots...">
+        <button class="btn-gold" id="btnHeroSearch" data-i18n="btnSearch">Search</button>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label" data-i18n="statsUnesco">UNESCO Sites</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1,400+</div>
+          <div class="stat-label" data-i18n="statsHistory">Years of History</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">70 min</div>
+          <div class="stat-label" data-i18n="statsKtx">Mins from Seoul via KTX</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Top 3</div>
+          <div class="stat-label" data-i18n="statsGourmet">Famous Gourmet</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Attractions Section -->
+  <section class="section" id="attractions">
+    <div class="section-header">
+      <h2 data-i18n="sectionAttractionsTitle">Top Featured Destinations</h2>
+      <p data-i18n="sectionAttractionsSubtitle">Handpicked experiences for international travelers visiting Iksan</p>
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div class="filter-bar">
+      <div class="category-pills">
+        <button class="pill-btn active" data-category="all" data-i18n="catAll">All Attractions</button>
+        <button class="pill-btn" data-category="unesco" data-i18n="catUnesco">UNESCO World Heritage</button>
+        <button class="pill-btn" data-category="culture" data-i18n="catCulture">Culture & K-Drama</button>
+        <button class="pill-btn" data-category="nature" data-i18n="catNature">Nature & Parks</button>
+        <button class="pill-btn" data-category="food" data-i18n="catFood">Gourmet & Food</button>
+      </div>
+
+      <div>
+        <select class="sort-select" id="sortSelect" aria-label="Sort Attractions">
+          <option value="rating" data-i18n="sortRating">Highest Rated</option>
+          <option value="reviews" data-i18n="sortReviews">Most Popular</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Dynamic Card Grid -->
+    <div class="cards-grid" id="attractionsGrid">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Itinerary Builder Section -->
+  <section class="section" id="itineraries">
+    <div class="section-header">
+      <h2 data-i18n="sectionItineraryTitle">Recommended Tour Courses</h2>
+      <p data-i18n="sectionItinerarySubtitle">Optimized itineraries crafted for 1-Day and 2-Day trips</p>
+    </div>
+
+    <div class="itinerary-courses" id="itinerariesGrid">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- My Trip Board -->
+    <div class="my-trip-board" id="myTripBoard">
+      <div class="trip-board-header">
+        <h3 data-i18n="myPlanTitle" style="font-size: 1.4rem; color: #FFF;">My Custom Trip Itinerary</h3>
+        <div class="trip-board-actions">
+          <button class="btn-gold" onclick="exportTripPlan()" data-i18n="btnExportPlan">Print / Export Itinerary</button>
+          <button class="btn-outline" onclick="clearTripPlan()" data-i18n="btnClearPlan">Clear All</button>
+        </div>
+      </div>
+      <div class="trip-items-list" id="tripItemsList">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Multilingual Audio Guide Section -->
+  <section class="section" id="audio">
+    <div class="section-header">
+      <h2 data-i18n="sectionAudioTitle">Interactive Multilingual Audio Guide</h2>
+      <p data-i18n="sectionAudioSubtitle">Listen to captivating stories of Iksan's 1,400-year history told in your language</p>
+    </div>
+
+    <div class="audio-player-container">
+      <div class="audio-list" id="audioListContainer">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="active-audio-box">
+        <div class="audio-controls">
+          <button class="btn-play-big" id="btnToggleAudioPlay" onclick="toggleAudioPlayback()" aria-label="Play or Pause Audio">▶</button>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--primary-gold);" data-i18n="audioPlaying">Now Playing:</div>
+            <h3 id="currentAudioTitle" style="color:#FFF;">Mireuksa Temple Site</h3>
+          </div>
+        </div>
+
+        <div class="audio-transcript" id="audioTranscriptText">
+          Select an audio track above to view narration text and listen...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel & Access Section -->
+  <section class="section" id="transport">
+    <div class="section-header">
+      <h2 data-i18n="sectionTransportTitle">Travel & Access to Iksan</h2>
+      <p data-i18n="sectionTransportSubtitle">Iksan Station is the central high-speed KTX/SRT railway hub in western South Korea</p>
+    </div>
+
+    <div class="my-trip-board">
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="stat-card">
+          <h3 style="color: var(--primary-gold); margin-bottom: 0.5rem;">🚄 KTX / SRT Express Rail</h3>
+          <p style="font-size: 0.9rem; color: #CBD5E1;">
+            Direct high-speed trains connection from <strong>Seoul (Yongsan/Suseo Station)</strong> to Iksan Station in ~70 mins. Train runs every 20-30 minutes.
+          </p>
+        </div>
+        <div class="stat-card">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">✈️ From Incheon Int'l Airport</h3>
+          <p style="font-size: 0.9rem; color: #CBD5E1;">
+            Take AREX Express train to Yongsan Station, then transfer directly to KTX. Or take direct Limousine Airport Bus to Iksan Terminal (~3 hrs).
+          </p>
+        </div>
+        <div class="stat-card">
+          <h3 style="color: var(--accent-green); margin-bottom: 0.5rem;">🚌 Iksan City Tour Bus</h3>
+          <p style="font-size: 0.9rem; color: #CBD5E1;">
+            Specially operated weekend routes connecting Iksan KTX Station to UNESCO sites, Prison Set & Gem Museum for only <strong>KRW 2,000</strong> per day pass!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Essential Tourist Toolkit -->
+  <section class="section" id="toolkit">
+    <div class="section-header">
+      <h2 data-i18n="sectionToolkitTitle">Essential Foreign Tourist Toolkit</h2>
+      <p data-i18n="sectionToolkitSubtitle">Korean travel phrases with voice pronunciation, hotlines, and instant currency converter</p>
+    </div>
+
+    <div class="tabs-header">
+      <button class="tab-btn active" data-tab="tabPhrases" data-i18n="tabPhrases">Essential Korean Phrases</button>
+      <button class="tab-btn" data-tab="tabHotlines" data-i18n="tabHotlines">Emergency & Tourist Hotlines</button>
+      <button class="tab-btn" data-tab="tabCurrency" data-i18n="tabCurrency">Currency & Budget Helper</button>
+    </div>
+
+    <div class="tab-content active" id="tabPhrases">
+      <div class="phrases-grid" id="phrasesContainer">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+
+    <div class="tab-content" id="tabHotlines">
+      <div class="hotline-grid" id="hotlinesContainer">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+
+    <div class="tab-content" id="tabCurrency">
+      <div class="currency-box">
+        <div style="margin-bottom: 1rem;">
+          <label data-i18n="currencyLabelAmount" style="display:block; font-weight:600; margin-bottom: 0.5rem;">Amount in KRW (₩)</label>
+          <div class="currency-form">
+            <input type="number" id="krwAmount" value="10000" step="1000">
+            <button class="btn-gold" id="btnConvertCurrency" data-i18n="currencyConvertBtn">Convert</button>
+          </div>
+        </div>
+
+        <div class="currency-results">
+          <div class="curr-item">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">USD ($)</div>
+            <div class="curr-val" id="resUSD">$0.00</div>
+          </div>
+          <div class="curr-item">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">EUR (€)</div>
+            <div class="curr-val" id="resEUR">€0.00</div>
+          </div>
+          <div class="curr-item">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">JPY (¥)</div>
+            <div class="curr-val" id="resJPY">¥0</div>
+          </div>
+          <div class="curr-item">
+            <div style="font-size: 0.8rem; color: var(--text-muted);">CNY (¥)</div>
+            <div class="curr-val" id="resCNY">¥0.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="margin-bottom: 1rem;">
+      <h3 style="color: var(--primary-gold);" data-i18n="brandName">Visit Iksan</h3>
+      <p style="font-size: 0.85rem;" data-i18n="brandSubtitle">Ancient Baekje & Jewels of Korea</p>
+    </div>
+    <p data-i18n="footerText">© 2026 Iksan City Global Tourism Information Portal. All rights reserved.</p>
+    <p style="font-size: 0.8rem; margin-top: 0.4rem; color: #64748B;" data-i18n="footerSupport">
+      Supported by Ministry of Culture, Sports and Tourism & Iksan Tourism Organization.
+    </p>
+  </footer>
+
+  <!-- Attraction Detail Modal -->
+  <div class="modal-overlay" id="attractionModal">
+    <div class="modal-card">
+      <button class="btn-close-modal" onclick="closeModal()" aria-label="Close Modal">✕</button>
+      <img src="" alt="" id="modalImg" class="modal-header-img">
+      <div class="modal-content">
+        <h2 id="modalTitle" style="font-size: 1.8rem; color: #FFF; margin-bottom: 1rem;"></h2>
+        <p id="modalFullDesc" style="color: #CBD5E1; margin-bottom: 1.5rem; line-height: 1.7;"></p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background: rgba(0,0,0,0.3); padding: 1.2rem; border-radius: var(--radius-md); font-size: 0.9rem;">
+          <div>
+            <span style="color: var(--primary-gold); font-weight:700;" data-i18n="modalOpeningHours">Opening Hours</span>
+            <div id="modalHours" style="color:#FFF;"></div>
+          </div>
+          <div>
+            <span style="color: var(--primary-gold); font-weight:700;" data-i18n="modalAdmission">Admission</span>
+            <div id="modalAdmission" style="color:#FFF;"></div>
+          </div>
+          <div>
+            <span style="color: var(--primary-gold); font-weight:700;" data-i18n="modalPhone">Telephone</span>
+            <div id="modalPhone" style="color:#FFF;"></div>
+          </div>
+          <div style="grid-column: 1/-1;">
+            <span style="color: var(--primary-gold); font-weight:700;" data-i18n="modalAddress">Address</span>
+            <div id="modalAddress" style="color:#FFF;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating AI Assistant Chatbot -->
+  <button class="chatbot-fab" id="chatbotFab" title="Open AI Travel Assistant" aria-label="Open AI Assistant">🤖</button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chat-header">
+      <div>
+        <h4 data-i18n="botTitle" style="color:#FFF; font-size: 1rem;">Iksan AI Travel Assistant</h4>
+        <p data-i18n="botSubtitle" style="font-size: 0.75rem; color: var(--text-muted);">Ask anything about transport, food & spots!</p>
+      </div>
+      <button id="btnCloseChat" style="background:none; border:none; color:#FFF; font-size: 1.2rem; cursor:pointer;" aria-label="Close Chat Window">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        Hello! I'm your Iksan Travel Concierge. How can I help you plan your trip to Iksan today? (You can ask in English, 한국어, 日本語, 简体中文)
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" data-i18n-ph="botInputPlaceholder" placeholder="Ask Iksan Bot (e.g. How to go to Mireuksa?)...">
+      <button id="btnSendMsg" data-i18n="botSend">Send</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
